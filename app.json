@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Lego",
+    "slug": "Lego",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "Lego"
+}
