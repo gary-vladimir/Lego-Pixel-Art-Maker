@@ -22,7 +22,7 @@ export default function App() {
                 barStyle="light-content"
             />
             <View style={{ padding: 20 }}>
-                <Text>Lego Pixel Art Maker</Text>
+                <Text style={styles.title}>Lego Pixel Art Maker</Text>
             </View>
         </View>
     );
@@ -32,5 +32,11 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
+    },
+    title: {
+        color: '#1D3557',
+        fontSize: 30,
+        fontWeight: 'bold',
+        width: 200,
     },
 });
