@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
 const legoColors = [
     '05131D',
@@ -21,13 +21,19 @@ export function ColorPicker() {
         <View style={styles.container}>
             {legoColors.map((color) => {
                 return (
-                    <View
+                    <TouchableOpacity
                         key={color}
-                        style={[
-                            styles.square,
-                            { backgroundColor: `#${color}` },
-                        ]}
-                    />
+                        onPress={() => {
+                            console.log('user selected color:', color);
+                        }}
+                    >
+                        <View
+                            style={[
+                                styles.square,
+                                { backgroundColor: `#${color}` },
+                            ]}
+                        />
+                    </TouchableOpacity>
                 );
             })}
         </View>
