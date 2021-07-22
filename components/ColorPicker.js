@@ -19,26 +19,17 @@ const legoColors = [
 export function ColorPicker() {
     return (
         <View style={styles.container}>
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
-            <View style={styles.square} />
+            {legoColors.map((color) => {
+                return (
+                    <View
+                        key={color}
+                        style={[
+                            styles.square,
+                            { backgroundColor: `#${color}` },
+                        ]}
+                    />
+                );
+            })}
         </View>
     );
 }
@@ -49,6 +40,8 @@ const styles = StyleSheet.create({
         width: 35,
         height: 35,
         margin: 5,
+        borderColor: 'gray',
+        borderWidth: 1,
     },
     container: {
         display: 'flex',
